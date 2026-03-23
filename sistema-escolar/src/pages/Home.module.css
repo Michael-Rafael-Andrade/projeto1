@@ -27,3 +27,33 @@
     cursor: pointer;
     color: inherit;
 }
+
+.icon {
+    font-size: 30px;
+    color: #1976d2;
+}
+
+.cards {
+    display: grid; /* Grid = coluna */
+    grid-template-columns: repeat(auto-fit, mimax(200px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.card{
+    background-color: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #1976d2;
+    font-weight: bold;
+}
+
+.light .card{
+    background-color: #fff;
+}
