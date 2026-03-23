@@ -1,0 +1,29 @@
+.container{
+    min-height: 100vh;
+    padding: 24px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.light{
+    background-color: #f4f6f8;
+    color: #000;
+}
+
+.dark{
+    background-color: #121212;
+    color: #fff;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.themeBtn{
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: inherit;
+}
