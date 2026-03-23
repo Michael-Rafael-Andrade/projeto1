@@ -1,21 +1,23 @@
-import styles from './Header.module.css'
-import {Link} from 'react-router-dom'
+import styles from './Header.module.css';
+import {Link} from 'react-router-dom';
+import {FaHome, FaUserGraduate, FaBook,  } from 'react-icons/fa';
+import {IoSchoolOutline} from 'react-icons/io5';
 
 function Header() {
 
     return (
         <header className={styles.header}>
-            <h1>Sistema Escolar</h1>
+            <h1>Sistema Escolar<IoSchoolOutline/></h1>
 
             <nav>
                 <Link to='/'>
-                    Home
+                    <FaHome/>Home
                 </Link>
                 <Link to='/'>
-                    Alunos
+                    <FaUserGraduate/>Alunos
                 </Link>
                 <Link to='/'>
-                    Biblioteca
+                    <FaBook/>Biblioteca
                 </Link>
             </nav>
 
