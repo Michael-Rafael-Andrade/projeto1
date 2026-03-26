@@ -1,7 +1,7 @@
 import styles from '../pages/CadastrarAlunos.module.css';
 
 
-function AlunoList({ alunos, removeraluno }) {
+function AlunoList({ alunos, removerAluno }) {
 
     if (alunos.length == 0) {
         return <p>Nenhum aluno cadastrado.</p>;
@@ -11,10 +11,10 @@ function AlunoList({ alunos, removeraluno }) {
         <ul className={styles.lista}>
             {alunos.map(aluno => (
                 <li key={aluno.id} className={styles.item}>
-                    <div>
-                        <strong>{aluno.nome}</strong>
-                        <button onClick={() => removeraluno(aluno.id)}>❌</button>
-                    </div>
+                    <strong>{aluno.nome}</strong>
+                    <button onClick={() => removerAluno(aluno.id)}>
+                        ❌
+                    </button>
                 </li>
             ))}
         </ul>
