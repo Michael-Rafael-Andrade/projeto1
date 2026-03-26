@@ -28,7 +28,7 @@ function CadastrarAlunos(){
 
 
             <AlunoForm adicionarAluno={adicionarAluno} />
-            <AlunoList/>
+            <AlunoList alunos={alunos} removerAluno={removerAluno}/>
 
 
         </div>

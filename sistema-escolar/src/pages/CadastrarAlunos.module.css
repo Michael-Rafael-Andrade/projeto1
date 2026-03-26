@@ -31,3 +31,20 @@
 .form button:hover{
     background-color: #1e40af;
 }
+
+.lista{
+    list-style: none;
+    padding: 0;
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    background: #f3f4f6;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+
+
+
