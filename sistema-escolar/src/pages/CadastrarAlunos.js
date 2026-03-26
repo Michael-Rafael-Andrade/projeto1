@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import styles from './CadastrarAlunos.module.css';
+import AlunoForm from './../components/AlunoForm.js';
+import AlunoList from '../components/AlunoList.js';
 
 
 function CadastrarAlunos(){
@@ -18,10 +21,16 @@ function CadastrarAlunos(){
     }
 
     return(
-        <div>
+        <div className={styles.container}>
             <h1>Cadastrar Alunos</h1>
 
-            {mensagem && <p>{mensagem}</p>}
+            {mensagem && <p className={styles.sucesso}>{mensagem}</p>}
+
+
+            <AlunoForm adicionarAluno={adicionarAluno} />
+            <AlunoList/>
+
+
         </div>
     );
 }
