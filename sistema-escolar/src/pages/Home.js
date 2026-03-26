@@ -4,6 +4,7 @@ import { FaSun, FaMoon, FaUserGraduate, FaClipboardList, FaBook } from 'react-ic
 import { Link } from 'react-router-dom';
 import { AiFillDashboard } from 'react-icons/ai';
 
+
 function Home() {
 
     const [darkMode, setDarkMode] = useState(false);
@@ -32,7 +33,7 @@ function Home() {
                     <FaUserGraduate className={styles.icon} />
                     <h3>Cadastro</h3>
                     <p>Gerenciamento de alunos</p>
-                    <Link to="/cadastrarAluno">Acessar</Link>
+                    <Link to="/cadastrarAlunos">Acessar</Link>
                 </div>
 
                 <div className={styles.card}>
