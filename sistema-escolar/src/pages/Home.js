@@ -8,6 +8,12 @@ function Home() {
 
     const [darkMode, setDarkMode] = useState(false);
 
+    const alunosPorSerie = [
+        { serie: '1º ano', total: 12 },
+        { serie: '2º ano', total: 8 },
+        { serie: '3º ano', total: 15 },
+    ];
+
     return (
         <div className={`${styles.container} ${darkMode ? styles.dark : styles.light}`}>
 
@@ -49,6 +55,21 @@ function Home() {
                     <p>Estatísticas da escola</p>
                     <Link to='/dashboard'>Acessar</Link>
                 </div>
+
+            </section>
+
+            <section className={styles.chart}>
+
+                <h2>Alunos por série</h2>
+
+                {alunosPorSerie.map((item, index) => (
+                    <div key={index} className ={styles.barContainer}>
+                        <span>{item.serie}</span>
+                        <div className={styles.bar} style={{width: `${item.total * 10 }px` }}>
+                            {item.total}
+                        </div>
+                   </div>
+                ))}
 
             </section>
 
