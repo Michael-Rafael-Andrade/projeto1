@@ -1,0 +1,12 @@
+
+
+function ListagemAlunos(){
+
+    return(
+        <>
+        
+        </>
+    );
+}
+
+export default listagemAlunos;
