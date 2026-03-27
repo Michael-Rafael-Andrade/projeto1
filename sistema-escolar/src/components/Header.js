@@ -13,10 +13,10 @@ function Header() {
                 <Link to='/'>
                     <FaHome/>Home
                 </Link>
-                <Link to='/'>
+                <Link to='/alunos'>
                     <FaUserGraduate/>Alunos
                 </Link>
-                <Link to='/'>
+                <Link to='/biblioteca'>
                     <FaBook/>Biblioteca
                 </Link>
             </nav>
