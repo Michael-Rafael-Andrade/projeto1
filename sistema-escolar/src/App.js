@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import CadastrarAlunos from './pages/CadastrarAlunos';
 import Alunos from './pages/Alunos.js';
 import Biblioteca from './pages/Biblioteca.js';
+import Dashboard from './pages/Dashboard.js';
 
 function App() {
   return (
@@ -13,18 +14,15 @@ function App() {
 
       <main>
         <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/cadastrarAlunos' element={<CadastrarAlunos/>}/>
-          <Route path='/Alunos' element={<Alunos/>}/>
-          <Route path='/Biblioteca' element={<Biblioteca/>}/>
-          {/* <Route path='/' element={<Alunos/>}/>
-          <Route path='/' element={<Biblioteca/>}/> */}
-
-  
-        </Routes> 
+          <Route path='/' element={<Home />} />
+          <Route path='/cadastrarAlunos' element={<CadastrarAlunos />} />
+          <Route path='/Alunos' element={<Alunos />} />
+          <Route path='/Biblioteca' element={<Biblioteca />} />
+          <Route path='/Dashboard' element={<Dashboard />} />
+        </Routes>
       </main>
 
-        <Footer/>
+      <Footer />
 
     </BrowserRouter>
   );
