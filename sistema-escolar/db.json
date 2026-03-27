@@ -1,18 +1,34 @@
 {
-    "alunos":[],
-    "livros":[
+    "alunos": [
         {
-            "id": 1, 
+            "id": "1",
+            "nome": "Gabriel Henrique",
+            "curso": "Informática"
+        },
+        {
+            "id": "2",
+            "nome": "João Souza",
+            "curso": "Informática"
+        }, 
+        {
+            "id": "3",
+            "nome": "Michael Andrade",
+            "curso": "FullStack"
+        }
+    ],
+    "livros": [
+        {
+            "id": 1,
             "titulo": "Fundamentos de React",
             "autor": "Maria da Silva"
         },
         {
-            "id": 2, 
+            "id": 2,
             "titulo": "React na prática",
             "autor": "João Souza"
         },
         {
-            "id": 3, 
+            "id": 3,
             "titulo": "Linguagens de programação",
             "autor": "Ana Costa Ribeiro"
         },
@@ -26,6 +42,5 @@
             "titulo": "Desenvolvimento Web",
             "autor": "Fernando José"
         }
-
     ]
 }

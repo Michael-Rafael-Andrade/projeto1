@@ -1,11 +1,11 @@
-
+import styles from './ListagemAlunos.module.css';
 
 function ListagemAlunos(){
 
     return(
-        <>
-        
-        </>
+        <div>
+            <input type="text" placeholder="Pesquisar aluno por nome..." value={termoBusca} onchange={(e) => setTermoBusca(e.target.value)} className={styles.input_busca} />
+        </div>
     );
 }
 
