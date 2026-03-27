@@ -9,4 +9,4 @@ function ListagemAlunos(){
     );
 }
 
-export default listagemAlunos;
+export default ListagemAlunos;
