@@ -8,7 +8,7 @@ function Dashboard() {
         <DashboardLayout>
             <h1>Dashboard</h1>
 
-            <div style={{display:"flex", gap: "20px", margintop: "20px"}}>
+            <div style={{display:"flex", gap: "20px", marginTop: "20px"}}>
                 <Card titulo="Total de alunos" valor="120"/>
                 <Card titulo="Livros cadastrados" valor="58"/>
                 <Card titulo="Emprestimos ativos" valor="12"/>

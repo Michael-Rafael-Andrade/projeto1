@@ -1,7 +1,7 @@
 import styles from './Card.module.css';
 
 
-function Card(titulo, valor){
+function Card({titulo, valor}){
 
     return(
         <div className={styles.card}>
