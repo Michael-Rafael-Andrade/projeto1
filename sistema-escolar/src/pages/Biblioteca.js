@@ -8,6 +8,22 @@ function Biblioteca() {
 
     useEffect(() => {
 
+        setTimeout( () => {
+            // Simulando dados vindo de uma API
+            fetch("http://localhost:5000/livros")
+            .then((resp) => resp.json())
+            .then((data) => {
+                setLivros(data);
+                setLoading(false);
+            })
+            .catch((err) => {
+                console.log(err);
+                setLoading(false);
+            });
+
+        }, 2000);
+
+        /*
         const dados = [
             { id: 1, titulo: 'Fundamentos de React', autor: 'Maria Silva' },
             { id: 2, titulo: 'React na prática', autor: 'João Souza' },
@@ -21,6 +37,8 @@ function Biblioteca() {
             setLivros(dados);
             setLoading(false);
         }, 2000);
+
+        */
 
     }, []);
 
