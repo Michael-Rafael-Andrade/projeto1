@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import styles from './Biblioteca.module.css';
 
 function Biblioteca() {
 
@@ -8,9 +9,9 @@ function Biblioteca() {
     useEffect(() => {
 
         const dados = [
-            { id: 1, titulo: 'Livro 1', autor: 'Maria Silva' },
-            { id: 2, titulo: 'Livro 2', autor: 'João Souza' },
-            { id: 3, titulo: 'Livro 3', autor: 'Ana Costa' },
+            { id: 1, titulo: 'Fundamentos de React', autor: 'Maria Silva' },
+            { id: 2, titulo: 'React na prática', autor: 'João Souza' },
+            { id: 3, titulo: 'Linguagens de programação', autor: 'Ana Costa' },
             { id: 4, titulo: 'Livro 4', autor: 'José da Silva' },
             { id: 5, titulo: 'Livro 5', autor: 'Fernanda Santos' },
             { id: 6, titulo: 'Livro 6', autor: 'Gabriel Henrique' },
@@ -29,10 +30,11 @@ function Biblioteca() {
 
     return (
 
-        <div>
+        <div className={styles.container}>
+            <h1>Lista de Livros</h1>
             {livros.length === 0 ? (<p>Nenhum livro encontrado</p>)
                 : (
-                    <table>
+                    <table className={styles.tabela}>
                         <thead>
                             <tr>
                                 <th>
@@ -48,16 +50,16 @@ function Biblioteca() {
                         </thead>
                         <tbody>
                             {livros.map(livro => (
-                                <tr key = {livro.id} >
+                                <tr key={livro.id} >
                                     <td>{livro.id}</td>
                                     <td>{livro.titulo}</td>
                                     <td>{livro.autor}</td>
                                 </tr>
                             ))}
-                    </tbody>
+                        </tbody>
                     </table>
-    )
-}
+                )
+            }
         </div >
 
     );
