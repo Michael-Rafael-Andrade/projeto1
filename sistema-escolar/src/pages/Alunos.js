@@ -27,7 +27,7 @@ function Alunos() {
     }, []);
 
     if (loading) {
-        return <p className={styles.loading}>Carregando Dados...</p>
+        return <p className={styles.loading}>Carregando Alunos...</p>
     }
 
 

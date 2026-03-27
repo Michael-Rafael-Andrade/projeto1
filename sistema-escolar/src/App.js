@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Footer from './components/Footer';
 import CadastrarAlunos from './pages/CadastrarAlunos';
 import Alunos from './pages/Alunos.js';
+import Biblioteca from './pages/Biblioteca.js';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/cadastrarAlunos' element={<CadastrarAlunos/>}/>
           <Route path='/Alunos' element={<Alunos/>}/>
+          <Route path='/Biblioteca' element={<Biblioteca/>}/>
           {/* <Route path='/' element={<Alunos/>}/>
           <Route path='/' element={<Biblioteca/>}/> */}
 
