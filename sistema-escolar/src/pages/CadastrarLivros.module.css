@@ -1,0 +1,60 @@
+/* Container do formulário */
+.formContainer {
+    max-width: 400px;
+    /* margin: 20px auto; */
+    margin: 0 auto 20px auto;
+    /* alinhamaneto na direita e esquerda */
+    display: block;
+    /* garante que o input se comporte como um bloco */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Estilização dos inputs */
+.formInput {
+    width: 100%;
+    padding: 10px;
+    /* margin: 40px auto; */
+    margin: 0 auto 20px auto;
+    /* alinhamaneto na direita e esquerda */
+    display: block;
+    /* garante que o input se comporte como um bloco */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Garante que o padding não aumente a largura */
+}
+
+/* Efeito ao clicar no input */
+.formInput:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilização do botão */
+.btnSubmit {
+    width: 60%;
+    padding: 10px;
+    margin: 5px auto 20px auto;
+    /* alinhamaneto na direita e esquerda */
+    display: block;
+    /* garante que o input se comporte como um bloco */
+    background: #777;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btnSubmit:hover {
+    background-color: #1e40af;
+}
+
+.btnSubmit:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

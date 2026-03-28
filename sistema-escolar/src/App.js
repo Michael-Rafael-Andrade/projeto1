@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import CadastrarAlunos from './pages/CadastrarAlunos';
 import Alunos from './pages/Alunos.js';
 import Biblioteca from './pages/Biblioteca.js';
+import CadastrarLivros from './pages/CadastrarLivros.js';
 import Dashboard from './pages/Dashboard.js';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path='/cadastrarAlunos' element={<CadastrarAlunos />} />
           <Route path='/Alunos' element={<Alunos />} />
           <Route path='/Biblioteca' element={<Biblioteca />} />
+          <Route path='/CadastrarLivros' element={<CadastrarLivros />} />
           <Route path='/Dashboard' element={<Dashboard />} />
         </Routes>
       </main>

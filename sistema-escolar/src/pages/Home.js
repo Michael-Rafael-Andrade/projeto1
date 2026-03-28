@@ -51,6 +51,13 @@ function Home() {
                 </div>
 
                 <div className={styles.card}>
+                    <FaBook className={styles.icon}/>
+                    <h3>Cadastro</h3>
+                    <p>Gerenciamento de livros</p>
+                    <Link to='/cadastrarLivros'>Acessar</Link>
+                </div>
+
+                <div className={styles.card}>
                     <AiFillDashboard className={styles.icon} />
                     <h3>Dashboard</h3>
                     <p>Estatísticas da escola</p>

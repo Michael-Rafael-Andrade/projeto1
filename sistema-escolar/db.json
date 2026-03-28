@@ -1,46 +1,77 @@
 {
-    "alunos": [
-        {
-            "id": "1",
-            "nome": "Gabriel Henrique",
-            "curso": "Informática"
-        },
-        {
-            "id": "2",
-            "nome": "João Souza",
-            "curso": "Informática"
-        }, 
-        {
-            "id": "3",
-            "nome": "Michael Andrade",
-            "curso": "FullStack"
-        }
-    ],
-    "livros": [
-        {
-            "id": 1,
-            "titulo": "Fundamentos de React",
-            "autor": "Maria da Silva"
-        },
-        {
-            "id": 2,
-            "titulo": "React na prática",
-            "autor": "João Souza"
-        },
-        {
-            "id": 3,
-            "titulo": "Linguagens de programação",
-            "autor": "Ana Costa Ribeiro"
-        },
-        {
-            "id": 4,
-            "titulo": "Front End com React",
-            "autor": "Fernando da Silva"
-        },
-        {
-            "id": 5,
-            "titulo": "Desenvolvimento Web",
-            "autor": "Fernando José"
-        }
-    ]
+  "alunos": [
+    {
+      "id": "1",
+      "nome": "Gabriel Henrique",
+      "curso": "Informática"
+    },
+    {
+      "id": "2",
+      "nome": "João Souza",
+      "curso": "Informática"
+    },
+    {
+      "id": "rFIAt6IsSHY",
+      "nome": "Michael Andrade",
+      "curso": "Informática"
+    },
+    {
+      "id": "Kdqa8X4CwX4",
+      "nome": "Luiz Guilherme",
+      "curso": "Informática"
+    },
+    {
+      "id": "FvWIHAY1_iI",
+      "nome": "Elaine Das Merces Resende",
+      "curso": "Informática"
+    },
+    {
+      "id": "3Mxtn5ZZ4-s",
+      "nome": "Samuel Chagas Resende de Andrade",
+      "curso": "Informática"
+    },
+    {
+      "id": "gxFaWZptJNk",
+      "nome": "Milena Resende de Andrade",
+      "curso": "Informática"
+    }
+  ],
+  "livros": [
+    {
+      "id": "1",
+      "titulo": "Fundamentos de React",
+      "autor": "Maria da Silva"
+    },
+    {
+      "id": "2",
+      "titulo": "React na prática",
+      "autor": "João Souza"
+    },
+    {
+      "id": "3",
+      "titulo": "Linguagens de programação",
+      "autor": "Ana Costa Ribeiro"
+    },
+    {
+      "id": "4",
+      "titulo": "Front End com React",
+      "autor": "Fernando da Silva"
+    },
+    {
+      "id": "5",
+      "titulo": "Desenvolvimento Web",
+      "autor": "Fernando José"
+    },
+    {
+      "titulo": "Codigo Limpo",
+      "autor": "Martin C. robert",
+      "id": "D-7FDUbheZs"
+    },
+    {
+      "titulo": "Codigo",
+      "autor": "Robert",
+      "id": "74OphxxIHXg"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
