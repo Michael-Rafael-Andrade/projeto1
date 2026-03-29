@@ -1,0 +1,46 @@
+.formContainer {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  background-color: var(--bg-card);
+  color: var(--texto-principal);
+}
+
+.formInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: var(--bg-principal);
+  color: var(--texto-principal);
+  border: 1px solid var(--borda);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.btnSubmit {
+  width: 100%;
+  padding: 10px;
+  background: #777;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btnSubmit:hover {
+  background-color: #1e40af;
+}
+
+/* Estilo para itens de lista (Alunos/Livros) */
+.item {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--bg-secundario);
+  color: var(--texto-principal);
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+}

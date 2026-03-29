@@ -2,6 +2,8 @@
 .container{
     max-width: 800px;
     margin: auto;
+    background-color: var(--bg-secundario); /* Em vez de #f4f6f8 */
+    color: var(--texto-principal);
 }
 
 .sucesso{
@@ -13,6 +15,8 @@
     display: grid;
     gap: 10px;
     margin-bottom: 20px;
+    background-color: var(--bg-secundario); /* Em vez de #f4f6f8 */
+    color: var(--texto-principal);
 }
 
 .form input{
@@ -22,8 +26,8 @@
 
 .form button{
     padding: 10px;
-    background: #777;
-    color: white;
+    /* background: #777; */
+    /* color: white; */
     border: none;
     cursor: pointer;
 }
@@ -35,15 +39,19 @@
 .lista{
     list-style: none;
     padding: 0;
+    background-color: var(--bg-secundario); /* Em vez de #f4f6f8 */
+    color: var(--texto-principal);
 }
 
 .item{
     display: flex;
     justify-content: space-between;
-    background: #f3f4f6;
+    /* background: #f3f4f6; */
     padding: 10px;
     margin-bottom: 8px;
     border-radius: 5px;
+    background-color: var(--bg-secundario); /* Em vez de #f4f6f8 */
+    color: var(--texto-principal);
 }
 
 

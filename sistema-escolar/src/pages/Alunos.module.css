@@ -3,8 +3,10 @@
     max-width: 600px;
     margin: 40px auto;
     padding: 20px;
-    background: #f4f6f8;
+    /* background: #f4f6f8; */
     border-radius: 8px;
+    background-color: var(--bg-secundario); /* Em vez de #f4f6f8 */
+    color: var(--texto-principal); /* Em vez de #000 */
 }
 
 .vazio{

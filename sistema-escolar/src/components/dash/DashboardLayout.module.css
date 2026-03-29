@@ -1,11 +1,17 @@
-
-.layout{
+.layout {
     display: flex;
     min-height: 100vh;
+    background-color: var(--bg-secundario);
+    /* Em vez de #f4f6f8 */
+    /* color: var(--texto-principal); */
+    color: #999999;
 }
 
-.content{
+.content {
     background: #f4f6f9;
     flex: 1;
     padding: 30px;
+    background-color: var(--bg-secundario);
+    /* Em vez de #f4f6f8 */
+    /* color: var(--texto-principal); */
 }

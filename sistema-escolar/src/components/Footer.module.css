@@ -1,27 +1,27 @@
-.footer{
-    background-color: #f2f2f2;
-    padding: 12px;
-    text-align: center;
-    margin-top: 40px;
-    color: #555;
-    border-top: 1px solid #ddd;
+.footer {
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #444;
 }
 
-.social_list{
-    display: flex; /* tirou da vertical e coloca na horizontal */
-    gap: 15px; /* espaçar um pouco */
-    list-style: none;   /* remover as bolinhas */
-    justify-content: center; /* colocar no meio */
+.social_list {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
 }
 
-.social_ist a{
-    font-size: 24px;
-    color: #444;
-    transition: 0.3s;
-    cursor: pointer;
+.social_list a {
+  font-size: 24px;
+  color: white;
+  transition: 0.3s;
 }
 
-.social_list a:hover{
-    transform: scale(1.2); /* aumenta ou diminui o tamanho*/
-    color: #0A66C2;
+.social_list a:hover {
+  transform: scale(1.2);
+  color: #0A66C2;
 }

@@ -34,6 +34,16 @@
       "id": "gxFaWZptJNk",
       "nome": "Milena Resende de Andrade",
       "curso": "Informática"
+    },
+    {
+      "id": "NiuiNQn4FDQ",
+      "nome": "Claudio ",
+      "curso": "Informática"
+    },
+    {
+      "id": "tlIgptsFlCg",
+      "nome": "Rafaela",
+      "curso": "Informática"
     }
   ],
   "livros": [
@@ -41,11 +51,6 @@
       "id": "1",
       "titulo": "Fundamentos de React",
       "autor": "Maria da Silva"
-    },
-    {
-      "id": "2",
-      "titulo": "React na prática",
-      "autor": "João Souza"
     },
     {
       "id": "3",
@@ -71,6 +76,16 @@
       "titulo": "Codigo",
       "autor": "Robert",
       "id": "74OphxxIHXg"
+    },
+    {
+      "id": "WnIs1M5NqEE",
+      "titulo": "Biblia sagrada",
+      "autor": "Deus"
+    },
+    {
+      "id": "axQrVe_SamY",
+      "titulo": "Amor a prova",
+      "autor": "Tom R. Martins"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

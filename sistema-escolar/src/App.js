@@ -7,26 +7,31 @@ import Alunos from './pages/Alunos.js';
 import Biblioteca from './pages/Biblioteca.js';
 import CadastrarLivros from './pages/CadastrarLivros.js';
 import Dashboard from './pages/Dashboard.js';
+import { ThemeProvider } from './contexts/ThemeContext';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
+    <ThemeProvider>
+      <BrowserRouter>
+        <Header />
 
-      <main>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/cadastrarAlunos' element={<CadastrarAlunos />} />
-          <Route path='/Alunos' element={<Alunos />} />
-          <Route path='/Biblioteca' element={<Biblioteca />} />
-          <Route path='/CadastrarLivros' element={<CadastrarLivros />} />
-          <Route path='/Dashboard' element={<Dashboard />} />
-        </Routes>
-      </main>
+        <main>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/cadastrarAlunos' element={<CadastrarAlunos />} />
+            <Route path='/Alunos' element={<Alunos />} />
+            <Route path='/Biblioteca' element={<Biblioteca />} />
+            <Route path='/CadastrarLivros' element={<CadastrarLivros />} />
+            <Route path='/Dashboard' element={<Dashboard />} />
+          </Routes>
+          <Footer />
 
-      <Footer />
+        </main>
 
-    </BrowserRouter>
+
+
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

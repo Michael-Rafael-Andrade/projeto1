@@ -5,13 +5,17 @@
 }
 
 .light{
-    background-color: #f4f6f8;
-    color: #000;
+    /* background-color: #f4f6f8; */
+    /* color: #000; */
+    background-color: var(--bg-secundario); /* Em vez de #f4f6f8 */
+    color: var(--texto-principal); /* Em vez de #000 */
 }
 
 .dark{
-    background-color: #121212;
-    color: #fff;
+    /* background-color: #121212; */
+    /* color: #fff; */
+    background-color: var(--bg-secundario); /* Em vez de #f4f6f8 */
+    color: var(--texto-principal); /* Em vez de #000 */
 }
 
 .header{

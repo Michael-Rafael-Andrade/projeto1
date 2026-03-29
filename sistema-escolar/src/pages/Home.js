@@ -1,5 +1,7 @@
 import styles from './Home.module.css';
-import { useState } from 'react';
+// import { useState } from 'react';
+import { useContext } from 'react';
+import { ThemeContext } from '../contexts/ThemeContext';
 import { FaSun, FaMoon, FaUserGraduate, FaClipboardList, FaBook } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AiFillDashboard } from 'react-icons/ai';
@@ -7,8 +9,7 @@ import { AiFillDashboard } from 'react-icons/ai';
 
 function Home() {
 
-    const [darkMode, setDarkMode] = useState(false);
-
+    const { darkMode } = useContext(ThemeContext);
     const alunosPorSerie = [
         { serie: '1º ano', total: 12 },
         { serie: '2º ano', total: 8 },
@@ -18,15 +19,15 @@ function Home() {
     return (
         <div className={`${styles.container} ${darkMode ? styles.dark : styles.light}`}>
 
-            <header className={styles.header}>
+            {/* <section className={styles.header}>
                 <h1>Home</h1>
                 <p>Bem Vindos a Escola React.js</p>
 
-                <button className={styles.themeBtn} onClick={() => setDarkMode(!darkMode)}>
+                {/* <button className={styles.themeBtn} onClick={() => setDarkMode(!darkMode)}>
                     {darkMode ? <FaSun /> : <FaMoon />}
-                </button>
+                </button> 
 
-            </header>
+            </header> */}
 
             <section className={styles.cards}>
                 <div className={styles.card}>
@@ -66,7 +67,20 @@ function Home() {
 
             </section>
 
+
             <section className={styles.chart}>
+                <h2>Alunos por série</h2>
+                {alunosPorSerie.map((item, index) => (
+                    <div key={index} className={styles.barContainer}>
+                        <span>{item.serie}</span>
+                        <div className={styles.bar} style={{ width: `${item.total * 10}px` }}>
+                            {item.total}
+                        </div>
+                    </div>
+                ))}
+            </section>
+
+            {/* <section className={styles.chart}>
 
                 <h2>Alunos por série</h2>
 
@@ -79,7 +93,7 @@ function Home() {
                    </div>
                 ))}
 
-            </section>
+            </section> */}
 
 
 
