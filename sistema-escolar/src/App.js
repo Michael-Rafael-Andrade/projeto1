@@ -8,6 +8,7 @@ import Biblioteca from './pages/Biblioteca.js';
 import CadastrarLivros from './pages/CadastrarLivros.js';
 import Dashboard from './pages/Dashboard.js';
 import { ThemeProvider } from './contexts/ThemeContext';
+// projeto 1
 
 function App() {
   return (
