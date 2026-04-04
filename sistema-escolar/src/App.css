@@ -1,0 +1,19 @@
+:root {
+  /* Cores Principais */
+  --primary: #2563eb;       /* Azul moderno */
+  --primary-hover: #1d4ed8;
+  --bg-dark: #0f172a;       /* Fundo modo escuro */
+  --bg-light: #f8fafc;      /* Fundo modo claro */
+  --card-light: #ffffff;
+  --card-dark: #1e293b;
+  
+  /* Texto */
+  --text-main: #334155;
+  --text-muted: #64748b;
+  
+  /* Efeitos */
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --radius: 12px;
+  --transition: all 0.3s ease;
+}
+

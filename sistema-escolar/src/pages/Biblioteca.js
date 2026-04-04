@@ -2,84 +2,50 @@ import { useState, useEffect } from 'react';
 import styles from './Biblioteca.module.css';
 
 function Biblioteca() {
-
     const [livros, setLivros] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-
-        setTimeout( () => {
-            // Simulando dados vindo de uma API
-            fetch("http://localhost:5000/livros")
-            .then((resp) => resp.json())
-            .then((data) => {
-                setLivros(data);
-                setLoading(false);
-            })
-            .catch((err) => {
-                console.log(err);
-                setLoading(false);
-            });
-
-        }, 2000);
-
-        /*
-        const dados = [
-            { id: 1, titulo: 'Fundamentos de React', autor: 'Maria Silva' },
-            { id: 2, titulo: 'React na prática', autor: 'João Souza' },
-            { id: 3, titulo: 'Linguagens de programação', autor: 'Ana Costa' },
-            { id: 4, titulo: 'Livro 4', autor: 'José da Silva' },
-            { id: 5, titulo: 'Livro 5', autor: 'Fernanda Santos' },
-            { id: 6, titulo: 'Livro 6', autor: 'Gabriel Henrique' },
-        ]
-
-        setTimeout(() => {
-            setLivros(dados);
-            setLoading(false);
-        }, 2000);
-
-        */
-
+        // --- ALTERAÇÃO: Busca direta do LocalStorage ---
+        const dadosLocais = localStorage.getItem('livros');
+        
+        if (dadosLocais) {
+            setLivros(JSON.parse(dadosLocais));
+        }
+        
+        setLoading(false); // Carregamento instantâneo
     }, []);
 
     if (loading) {
-        return <p>Carregando Livros...</p>
+        return <p className={styles.loading}>Carregando Livros...</p>
     }
 
     return (
-
         <div className={styles.container}>
             <h1>Lista de Livros</h1>
-            {livros.length === 0 ? (<p>Nenhum livro encontrado</p>)
-                : (
-                    <table className={styles.tabela}>
-                        <thead>
-                            <tr>
-                                <th>
-                                    Id
-                                </th>
-                                <th>
-                                    Título
-                                </th>
-                                <th>
-                                    Autor
-                                </th>
+            {livros.length === 0 ? (
+                <p className={styles.vazio}>Nenhum livro encontrado no acervo.</p>
+            ) : (
+                <table className={styles.tabela}>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Título</th>
+                            <th>Autor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {livros.map(livro => (
+                            <tr key={livro.id}>
+                                <td>{livro.id}</td>
+                                <td>{livro.titulo}</td>
+                                <td>{livro.autor}</td>
                             </tr>
-                        </thead>
-                        <tbody>
-                            {livros.map(livro => (
-                                <tr key={livro.id} >
-                                    <td>{livro.id}</td>
-                                    <td>{livro.titulo}</td>
-                                    <td>{livro.autor}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                )
-            }
-        </div >
-
+                        ))}
+                    </tbody>
+                </table>
+            )}
+        </div>
     );
 }
 

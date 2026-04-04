@@ -1,39 +1,227 @@
-/* Definição centralizada de variáveis */
-:root {
-  --transicao: all 0.3s ease;
-}
 
-body.light-mode {
-  --bg-principal: #ffffff;
-  --bg-secundario: #f4f6f8;
+:root {
+
+  --transicao: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --radius: 12px;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+  --bg-principal: #f8fafc;
   --bg-card: #ffffff;
-  --texto-principal: #1a1a1a;
-  --texto-corpo: #555555;
-  --borda: #dddddd;
+  --texto-principal: #0f172a;
+  --texto-muted: #64748b;
+  --borda: #e2e8f0;
+  --primaria: #2563eb;
+  --primaria-hover: #1d4ed8;
+  --danger: #ef4444;
+  --danger-hover: #dc2626;
+  --sucesso: #10b981;
 }
 
 body.dark-mode {
-  --bg-principal: #1a1a1a;
-  --bg-secundario: #2d2d2d;
-  --bg-card: #333333;
-  --texto-principal: #ffffff;
-  --texto-corpo: #cccccc;
-  --borda: #444444;
+  --bg-principal: #0f172a;
+  --bg-card: #1e293b;
+  --texto-principal: #f8fafc;
+  --texto-muted: #94a3b8;
+  --borda: #334155;
+  --primaria: #3b82f6;
+  --primaria-hover: #60a5fa;
 }
 
+/* --- 3. Estilos de Base --- */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background-color: var(--bg-principal);
   color: var(--texto-principal);
   transition: var(--transicao);
+  line-height: 1.6;
 }
 
-/* Containers base usados em várias páginas */
 .container {
   min-height: 100vh;
-  padding: 24px;
-  max-width: 1200px; /* Ajustado para ser mais flexível */
+  padding: 40px 20px;
+  max-width: 1100px;
   margin: auto;
+}
+
+header {
+  background-color: #1e293b; 
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.nav-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 0.95rem;
   transition: var(--transicao);
+}
+
+.nav-links a:hover {
+  color: var(--primaria);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 25px;
+}
+
+.card {
+  background-color: var(--bg-card);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--borda);
+  transition: var(--transicao);
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primaria);
+}
+
+.card h3 {
+  color: var(--texto-muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--primaria);
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: var(--bg-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--borda);
+  margin-top: 25px;
+}
+
+th {
+  background-color: var(--borda);
+  color: var(--texto-principal);
+  text-align: left;
+  padding: 16px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+td {
+  padding: 16px;
+  border-bottom: 1px solid var(--borda);
+  color: var(--texto-principal);
+}
+
+tr:hover {
+  background-color: rgba(37, 99, 235, 0.05);
+}
+
+.form-container {
+  max-width: 450px;
+  margin: 40px auto;
+  background-color: var(--bg-card);
+  padding: 35px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--borda);
+}
+
+input, .inputBusca {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  background-color: var(--bg-principal);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--texto-principal);
+  transition: var(--transicao);
+  box-sizing: border-box;
+}
+
+input:focus, .inputBusca:focus {
+  outline: none;
+  border-color: var(--primaria);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.inputBusca {
+  max-width: 400px;
+  border-radius: 50px; /* Estilo arredondado para busca */
+  padding-left: 20px;
+}
+
+button.cadastrar, .btn-acao {
+  background-color: var(--primaria);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transicao);
+}
+
+button.cadastrar:hover {
+  background-color: var(--primaria-hover);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.btn-remover, button[onClick*="remover"] {
+  background-color: transparent;
+  color: var(--danger);
+  border: 1px solid var(--danger);
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: var(--transicao);
+}
+
+.btn-remover:hover, button[onClick*="remover"]:hover {
+  background-color: var(--danger);
+  color: white;
+}
+
+.sucesso { 
+  color: var(--sucesso); 
+  font-weight: 600; 
+  background: rgba(16, 185, 129, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center; 
+}
+
+.vazio { 
+  color: var(--texto-muted); 
+  text-align: center; 
+  padding: 40px;
+  font-style: italic;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid var(--borda);
+  color: var(--texto-muted);
+  font-size: 0.9rem;
 }

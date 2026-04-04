@@ -7,54 +7,46 @@ function CadastrarAlunos() {
     const [alunos, setAlunos] = useState([]);
     const [mensagem, setMensagem] = useState('');
 
-    // Carregar os alunos do db.json quando a página abre
     useEffect(() => {
-        fetch('http://localhost:5000/alunos')
-            .then(res => res.json())
-            .then(dados => setAlunos(dados))
-            .catch(err => console.error("Erro ao carregar:", err));
+        const dadosLocais = localStorage.getItem('alunos');
+        if (dadosLocais) {
+            setAlunos(JSON.parse(dadosLocais));
+        }
     }, []);
 
-    // Adicionar, Enviar o novo aluno para o servidor (POST)
+
     async function adicionarAluno(nome) {
         const novoAluno = {
-            id: Date.now(), // Gera um ID único baseado no tempo
+            id: Date.now(), // ID único
             nome,
             curso: "Informática"
         };
 
         try {
-            const resposta = await fetch('http://localhost:5000/alunos', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(novoAluno) // Transforma o objeto em texto JSON
-            });
+   
+            const listaNova = [...alunos, novoAluno];
+            localStorage.setItem('alunos', JSON.stringify(listaNova));
+            
 
-            if (resposta.ok) {
-                // Atualiza a lista na tela apenas se gravou no arquivo!
-                setAlunos([...alunos, novoAluno]);
-                setMensagem('Aluno cadastrado com sucesso!');
-                setTimeout(() => setMensagem(''), 3000);
-            }
+            setAlunos(listaNova);
+            setMensagem('Aluno cadastrado com sucesso!');
+            setTimeout(() => setMensagem(''), 3000);
         } catch (erro) {
-            console.error("Erro ao salvar aluno:", erro);
+            console.error("Erro ao salvar aluno localmente:", erro);
         }
     }
 
-    // Remover, Apagar o aluno do servidor (DELETAR)
     async function removerAluno(id) {
         try {
-            const resposta = await fetch(`http://localhost:5000/alunos/${id}`, {
-                method: 'DELETE'
-            });
-
-            if (resposta.ok) {
-                // Filtrar a lista para remover da tela o aluno que foi apagado
-                const listaAtualizada = alunos.filter(aluno => aluno.id !== id);
-                setAlunos(listaAtualizada);
-                setMensagem('Aluno removido com sucesso! 🗑️');
-                setTimeout(() => setMensagem(''), 3000);
-            }
+            // Filtramos a lista removendo o ID selecionado
+            const listaAtualizada = alunos.filter(aluno => aluno.id !== id);
+            
+            localStorage.setItem('alunos', JSON.stringify(listaAtualizada));
+            
+            // Atualizamos a tela
+            setAlunos(listaAtualizada);
+            setMensagem('Aluno removido com sucesso! 🗑️');
+            setTimeout(() => setMensagem(''), 3000);
         } catch (erro) {
             console.error("Erro ao remover aluno:", erro);
         }
